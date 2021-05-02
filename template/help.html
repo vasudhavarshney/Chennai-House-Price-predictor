@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>
+		About page
+	</title>
+  <style>
+   .container{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding-top: 30px;
+   }
+  </style>
+  <style type="text/css">
+    body{
+  width: 100%;
+    height: 500px;
+      padding-top:0px;
+      margin-top:100px;
+    padding-bottom: 100px;
+        border: 0px;
+    background: url("https://static.technians.com/wp-content/uploads/2020/02/Guidelines-for-images-of-website-desig-title.jpg?x28918") no-repeat fixed center;
+    background-position:left; 
+      background-size:cover; 
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-origin:padding-box;
+     background-color:initial; 
+      background-opacity:0.50;
+      background-color: Gray;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding-top: 40px;
+}
+#demo{
+width:75%;
+margin:100px;
+padding:50px;
+border:50px;
+background-color:Gray;
+color:rgb(250,250,250);
+opacity:0.90;
+font-size:30px bold;
+font-family:arial;
+}
+.table{
+  color:#ffffff;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  display: block;
+  box-sizing: border-box;
+  z-index: 1030;
+border-radius: 0;
+width: 100%;
+border-width: 0 0 1px;
+}
+
+.topnav a {
+  float: left;
+  display:block;
+  flex-grow: rgb(250,0,0);
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  background-color: Gray;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: Gray;
+  color: white;
+}
+.container{
+  width: 80%;
+  height: 2000px;
+  background-color: rgb(250,250,250);
+  margin-left: auto;
+  margin-right: auto;
+  opacity:0.90;
+
+
+}
+.con1{
+  padding-right: 200px;
+padding-left: 200px;
+  margin-right: auto;
+margin-left: auto;
+background-color: White;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #000000;
+
+}
+
+.col-md-4 {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #000000;
+box-sizing: border-box;
+}
+footer{
+font-size: 14px;
+color: #000000;
+box-sizing: border-box;
+padding-bottom: 10px;
+}
+#img{
+  width:60%;
+  height: 40%;
+}
+
+
+
+</style>
+</head>
+<link rel="stylesheet" href="C:\Users\DELL\Desktop\mysite\css\homepage.css">
+<link rel="stylesheet" href="C:\Users\DELL\Desktop\mysite\css\123css.css">
+<body>
+
+<div class="topnav">
+  <a class="active" href="{{link}}">Home</a>
+  <a href="{{a}}">House Price</a>
+  <a href="#2">Contact</a>
+  <a href="#2">About</a>
+  <a href="{{b}}">Help</a>
+</div>
+<div style="padding-left:16px" class="container">
+  <center>
+<h1><u>HELP</u></h1>
+  <p><u>Step1</u>:-Click on the House Price.</p>
+<img src="{% static 'img1.png' %}" id=img>
+  <p><u>Step2</u>:-Fill up the form information</p>
+<img src="{% static 'ima3.png' %}" id=img>
+  <p><u>Step3</u>:-Click on the submit.</p>
+<img src="{% static 'ima2.png' %} " id=img>
+  <p><u>Step4</u>:-you will get your predicted house price value</p>
+<img src="{% static 'ima4.png' %}" id=img></center>
+</div>
+<div class="con1" id="2">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>ABOUT</h2>
+          <p>This paragraph contain the about. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>CONTACT</h2>
+          <p>vasudhavarshney@gmail.com<br>v.varshney0408@gmail.com<br>v.varshney1508@gmail.com<br>contact:-7599900215</p>
+          
+       </div>
+        <div class="col-md-4">
+          <h2>HELP</h2>
+          <p>For user guidline click on view more.</p>
+          <p><a class="btn btn-default" href="{{b}}" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2020 Company, Inc.</p>
+      </footer>
+    </div>
+
+</body>
+</html>

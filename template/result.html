@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+   .container{
+    margin-top: 30px;
+    margin-bottom: 0px;
+   }
+   #home-text a{
+   	font-size:90px;
+   	font-family: Dishonorable Mention;
+margin-top: 400px;
+background-attachment: fixed;
+color: Black;
+   }
+
+  </style>
+  <style type="text/css">
+    body{
+  width: 100%;
+    height: 500px;
+      padding-top:0px;
+      margin-top:0px;
+    padding-bottom: 100px;
+        border: 0px;
+    background: url("https://static.technians.com/wp-content/uploads/2020/02/Guidelines-for-images-of-website-desig-title.jpg?x28918") no-repeat fixed center;
+    background-position:left; 
+      background-size:cover; 
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-origin:padding-box;
+     background-color:initial; 
+      background-opacity:0.50;
+      background-color: Gray;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding-top: 40px;
+}
+#demo{
+width:75%;
+margin:100px;
+padding:50px;
+border:50px;
+background-color:Gray;
+color:rgb(250,250,250);
+opacity:0.90;
+font-size:30px bold;
+font-family:arial;
+border-radius: 20px;
+margin: auto;
+margin-bottom: 800px;
+}
+.table{
+  color:#ffffff;
+  margin: auto;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  display: block;
+  box-sizing: border-box;
+  z-index: 1030;
+border-radius: 0;
+width: 100%;
+border-width: 0 0 1px;
+}
+
+.topnav a {
+  float: left;
+  display:block;
+  flex-grow: rgb(250,0,0);
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  background-color: Gray;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: Gray;
+  color: white;
+}
+.container{
+  width: 80%;
+  height: 1500px;
+  background-color: rgb(250,250,250);
+  margin-left: auto;
+  margin-right: auto;
+  opacity:0.90;
+  padding-top: 100px;
+
+}
+.con1{
+  padding-right: 200px;
+padding-left: 200px;
+  margin-right: auto;
+margin-left: auto;
+background-color: White;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #000000;
+
+}
+
+.col-md-4 {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #000000;
+box-sizing: border-box;
+}
+footer{
+font-size: 14px;
+color: #000000;
+box-sizing: border-box;
+padding-bottom: 10px;
+}
+  </style>
+</head>
+<link rel="stylesheet" href="C:\Users\DELL\Desktop\mysite\css\homepage.css">
+<link rel="stylesheet" href="C:\Users\DELL\Desktop\mysite\css\123css.css">
+<body>
+<div class="topnav">
+  <a class="active" href="{{link}}">Home</a>
+  <a href="{{a}}">House Price</a>
+  <a href="#2">Contact</a>
+  <a href="#2">About</a>
+  <a href="{{b}}">Help</a>
+</div>
+	<div style="padding-left:16px" class="container" id="0">
+	
+<div>
+  <form method="POST" enctype="multipart/form-data" action="predict" id="demo">
+    {% csrf_token %}
+    <fieldset>
+    <legend>HOUSE PRICE</legend>
+      <table class="table">
+        <tr><td width="50%" align="right">Interior sq.ft. of the property :</td><td width="50%" align="left"><input type="text" placeholder="sq.ft" name="INT_SQFT" value="0" /></td></tr>
+
+        <tr><td width="50%" align="right">Distance of property from mainroad :</td><td width="50%" align="left"><input type="text" placeholder="mainroad_distance" name="DIST_MAINROAD" value="0" /></td></tr>
+
+        <tr><td width="50%" align="right">Commission :</td><td width="50%" align="left"><input type="text" placeholder="Commission" name="COMMIS" value="0" /></td></tr>
+
+        <tr><td width="50%" align="right">Area :</td><td width="50%" align="left"><SELECT placeholder="Area" name="AREA" value="4"><OPTION value="AREA_1">Select     </OPTION>
+          <OPTION value="AREA_6">Adyar</OPTION>
+          <OPTION value="AREA_5">Anna Nagar</OPTION>
+          <OPTION value="AREA_1">Chrompet</OPTION>
+          <OPTION value="AREA_3">KK Nagar</OPTION>
+          <OPTION value="AREA_2">Karapakkam</OPTION>
+          <OPTION value="AREA_7">T Nagar</OPTION>
+          <OPTION value="AREA_4">Velachery</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right">No. of Bedrooms :</td><td width="50%" align="left"><SELECT placeholder="Bedrooms" name="N_BEDROOM" ><OPTION value="N_BEDROOM_1">Select     </OPTION>
+          <OPTION value="N_BEDROOM_1">1</OPTION>
+          <OPTION value="N_BEDROOM_2">2</OPTION>
+          <OPTION value="N_BEDROOM_3">3</OPTION>
+          <OPTION value="N_BEDROOM_4">4</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right">No. of Bathrooms :</td><td width="50%" align="left"><SELECT placeholder="Bathrooms" name="N_BATHROOM" ><OPTION value="N_BATHROOM_1">Select     </OPTION>
+          <OPTION value="N_BATHROOM_1">1</OPTION>
+          <OPTION value="N_BATHROOM_2">2</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right">Total no. of rooms :</td><td width="50%" align="left"><SELECT placeholder="Rooms" name="N_ROOM" ><OPTION value="N_ROOM_2">Select        </OPTION>
+          <OPTION value="N_ROOM_2">2</OPTION>
+          <OPTION value="N_ROOM_3">3</OPTION>
+          <OPTION value="N_ROOM_4">4</OPTION>
+          <OPTION value="N_ROOM_5">5</OPTION>
+          <OPTION value="N_ROOM_6">6</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right">Sale Condition :</td><td width="50%" align="left"><SELECT placeholder="condition" name="SALE_COND" ><OPTION value="SALE_COND_3">Select        </OPTION>
+          <OPTION value="SALE_COND_4">AbNormal</OPTION>
+          <OPTION value="SALE_COND_1">AdjLand</OPTION>
+          <OPTION value="SALE_COND_5">Family</OPTION>
+          <OPTION value="SALE_COND_3">Normal Sale</OPTION>
+          <OPTION value="SALE_COND_2">Partial</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right">Parking :</td><td width="50%" align="left"><SELECT placeholder="Parking" name="PARK_FACIL" ><OPTION value="PARK_FACIL_0">Select        </OPTION>
+          <OPTION value="PARK_FACIL_1">Yes</OPTION>
+          <OPTION value="PARK_FACIL_0">No</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right">Type of building :</td><td width="50%" align="left"><SELECT placeholder="Building type" name="BUILDTYPE" ><OPTION value="BUILDTYPE_1">Select        </OPTION>
+          <OPTION value="BUILDTYPE_3">Commercial</OPTION>
+          <OPTION value="BUILDTYPE_1">House</OPTION>
+          <OPTION value="BUILDTYPE_2">Others</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right">Type of Street :</td><td width="50%" align="left"><SELECT placeholder="STREET" name="STREET"><OPTION value="STREET_1">Select        </OPTION>
+          <OPTION value="STREET_2">Gravel</OPTION>
+          <OPTION value="STREET_3">No Access</OPTION>
+          <OPTION value="STREET_1">Paved</OPTION></SELECT></td></tr>
+
+        <tr><td width="50%" align="right"><input type="reset" name="reset"></td><td width="50%" align="left"><input type="submit" placeholder="submit" name="submit" /><a href="#result"></td></tr>
+        
+
+      </table>
+      <center>
+      <div id="result">
+            <p>House Price:{{price}}</p>
+      </div>
+      </center>
+    </fieldset>
+
+  </form>
+</div>
+
+</div><!____________________CONTAINER_________________!>
+
+
+	  <div class="con1" id="2">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>ABOUT</h2>
+          <p>This paragraph contain the about. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>CONTACT</h2>
+          <p>vasudhavarshney@gmail.com<br>v.varshney0408@gmail.com<br>v.varshney1508@gmail.com<br>contact:-7599900215</p>
+       </div>
+        <div class="col-md-4">
+          <h2>HELP</h2>
+          <p>For user guidline click on view more.</p>
+          <p><a class="btn btn-default" href="{{b}}" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2020 Company, Inc.</p>
+      </footer>
+    </div>
+
+
+</body>
+</html>
